@@ -25,7 +25,6 @@ function printererror(colors) {
     let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
     let error = 0;
     let length = colors.length;
-
         for(let i = 0; i < colors.length; i++) {
             if(arr.indexOf(colors[i]) == -1) error++;
         }
