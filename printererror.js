@@ -26,7 +26,7 @@ function printererror(colors) {
     let error = 0;
     let length = colors.length;
         for(let i = 0; i < colors.length; i++) {
-            if(arr.indexOf(colors[i]) == -1) error++;
+            if(arr.includes(colors[i]) == false) error++;
         }
     return error + '/' + length
 }

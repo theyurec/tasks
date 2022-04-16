@@ -10,8 +10,13 @@ rgb(0,0,0) // returns 000000
 rgb(148, 0, 211) // returns 9400D3
 
 */
-function rgb(num1, num2, num3) {
-    return (num1.toString(16) +  num2.toString(16) + num3.toString(16)).toUpperCase()
+function componentToHex(c) {
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
 }
-let result = rgb(255, 255, 255);
-console.log(result)
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+console.log(rgbToHex(148, 0, 211));
