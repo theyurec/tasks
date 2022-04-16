@@ -18,29 +18,12 @@ function alphabetWar(fight){
     let rightSide = {m: 4, q: 3, d: 2, z: 1};
     let sumLeft = 0;
     let sumRight = 0;
-    for(let key in leftSide){
-        for(let i = 0; i <= fight.length; i++){
-            if(key == fight[i]){
-                sumLeft += leftSide[key];
-            }
-        }
-    }
 
-    for(let key in rightSide){
-        for(let i = 0; i <= fight.length; i++){
-            if(key == fight[i]){
-                sumRight += rightSide[key];
-            }
-        }
+    for(let i = 0; i <= fight.length; i++) {
+        if(fight[i] in leftSide) sumLeft += leftSide[fight[i]]
+        if(fight[i] in rightSide) sumRight += rightSide[fight[i]]
     }
-
-    if(sumLeft > sumRight){
-        console.log('Left side wins!')
-    } else if(sumRight > sumLeft) {
-        console.log('Right side wins!')
-    } else {
-        console.log('Equal!')
-    }
-
+    return (sumLeft > sumRight) ? 'Left side wins!' : (sumRight > sumLeft) ? 'Right side wins!' : 'Equal!'
 }
-alphabetWar('wwwwww')
+const result = alphabetWar('wterts')
+console.log(result)
