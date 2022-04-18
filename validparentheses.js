@@ -1,4 +1,5 @@
 /*
+
 Создайте функцию, которая принимает строку, состоящую из скобок, и возвращает true, если все скобки закрыты правильно.
 
 Примеры:
@@ -6,18 +7,19 @@
  ")(()))"          =>  false
  "("               =>  false
  "(())((()())())"  =>  true
-*/
 
+
+*/
 function valid(str) {
-    let open = '(';
+    let open  = '(';
     let close = ')';
     let opensum = 0;
     let closesum = 0;
-    for(let i = 0; i <= str.length; i++) {
-        if(str[i] === open) opensum++;
-        if(str[i] === close) closesum++;
+    for(let i = 0; i <= str.length; i++){
+        if(str[i] == open) opensum++;
+        if(str[i] == close) closesum++;
     }
-    return (opensum === closesum);
+    return (opensum == closesum)
 }
 let result = valid('(()))');
 console.log(result)

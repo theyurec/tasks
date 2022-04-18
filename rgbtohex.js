@@ -11,7 +11,7 @@ rgb(148, 0, 211) // returns 9400D3
 
 */
 function componentToHex(c) {
-    let hex = c.toString(16);
+    var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
 }
 
@@ -19,4 +19,4 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-console.log(rgbToHex(148, 0, 211));
+alert(rgbToHex(0, 51, 255));
